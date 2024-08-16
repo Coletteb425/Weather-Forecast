@@ -1,31 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Forecast 🌤</title>
+    <title>Weather forecast 🌤</title>
+    <meta charset="UTF-8" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <h1>
-        Weather Forecast
-    </h1>
-    <form id="city-form">
-        <input type="search" placeholder="Enter a city.." required class="search-input" id="search-input" />
-        <input type="submit" value="Search" class="search-button" />
-    </form>
-    <button>Degrees or Fahrenheit</button>
-    <div id="current-city">
-        CITY
-    </div>
-    <p>
-        This project was coded by
-        <a href="https://www.linkedin.com/in/colette-baker-bb79a793/" target="_blank">Colette Baker</a> and is
-        <a href="https://github.com/Coletteb425/SheCodes-weather-app" target="_blank"> on GitHub</a> and
-        <a href="https://main--colettesweather.netlify.app/" target="_blank">hosted on Netlify</a>
-    </p>
+    <div class="container">
+        <div class="weather-app">
+            <form id="search-form">
+                <input type="search" id="city-input" placeholder="Enter a city..." />
+                <input type="submit" id="search-button" value="Search" />
+                <button type="button" id="location-button" class="location-button">
+                    <i class="fas fa-map-marker-alt"></i>
+                </button>
+            </form>
 
+            <h1 id="city"></h1>
+            <h5 id="formatDate"></h5>
+            <div class="temperature-units">
+                <h2 class="weather-temp" id="temp"></h2>
+                <span class="units" id="units">
+                    <a href="#" class="active" id="celsius">°C</a> /
+                    <a href="#" id="fahrenheit">°F</a>
+                </span>
+            </div>
+
+            <img class="weather-icon" src="media/01n.png" alt="clear moon" id="icon" />
+            <h4 class="description" id="description"></h4>
+            <h4> Humidity: <span id="humidity"></span> %</h4>
+            <h4> Wind speed: <span id="wind-speed"></span> m/s </h4>
+
+
+            <div class="row gx-2 gy-1 text-center forecast" id="forecast">
+
+            </div>
+        </div>
+        <footer>
+            <p>
+                <a href="https://github.com/Coletteb425/Weather-Forecast" target="_blank">Open-source code</a>
+                by <a href="https://www.linkedin.com/in/colette-baker-bb79a793/">Colette Baker</a>
+            </p>
+        </footer>
+    </div>
+    <script src="scrtpt.js"></script>
 </body>
 
 </html>
