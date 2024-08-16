@@ -1,15 +1,16 @@
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: ;
+  font-family: "Roboto", system-ui;
+  background-color: #0c1439;
 }
 
 form {
   text-align: right;
+  font-family: "Roboto", system-ui;
 }
 
 h1 {
   color: #ff2281;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
   padding-top: 10px;
   font-weight: 700;
 }
@@ -17,23 +18,23 @@ h1 {
 h2,
 h3 {
   color: #ff2281;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
 }
 
 h4 {
   color: #ff2281;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
 }
 
 h5 {
   color: #ff2281;
   font-weight: 600;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
 }
 
 i {
   color: #ff2281;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
   font-size: 32px;
 }
 
@@ -41,7 +42,7 @@ p {
   font-size: 12px;
   text-align: center;
   color: #ff2281;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
 }
 
 img.forecast-icon {
@@ -83,14 +84,14 @@ h3.forecast-temp {
 .units {
   margin-left: 10px;
   color: #ff2281;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
   font-size: 22px;
   font-weight: 700;
 }
 
 .units a {
   color: #ff2281;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
 }
 
 .location-button {
@@ -106,8 +107,22 @@ h3.forecast-temp {
   text-decoration: none;
   cursor: default;
   color: #ff2281;
-  text-shadow: 1px 1px 1px gray;
+  text-shadow: 1px 1px 1px white;
 }
 .description::first-letter {
   text-transform: capitalize;
+}
+
+.codedby {
+  color: white;
+}
+button {
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px lightblue;
+  font-family: "Roboto", system-ui;
+}
+input {
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px lightblue;
+  font-family: "Roboto", system-ui;
 }
