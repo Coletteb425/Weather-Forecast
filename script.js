@@ -1,13 +1,16 @@
-function formatDate(props) {
-  let now = new Date(props);
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
+function formatDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let day = date.getDay();
+
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
+
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
   let days = [
     "Sunday",
     "Monday",
@@ -17,25 +20,25 @@ function formatDate(props) {
     "Friday",
     "Saturday",
   ];
-  let day = days[now.getDay()];
-  return `${day}, ${hours}:${minutes}`;
+
+  let formattedDay = days[day];
+  return `${formattedDay} ${hours}:${minutes}`;
 }
-function formatDay(timestamp) {
-  let date = new Date(timestamp * 1000);
-  let day = date.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-  return days[day];
-}
+
+let currentDateELement = document.querySelector("#formatDate");
+let currentDate = new Date();
+
+currentDateELement.innerHTML = formatDate(currentDate);
+
 // function displaying weather info from API
 function displayWeather(response) {
-  let city = response.data.name;
-  let country = response.data.sys.country;
-  tempC = response.data.main.temp;
-  let humidity = response.data.main.humidity;
+  let city = response.data.city;
+  let country = response.data.country;
+  tempC = response.data.temperature.current;
+  let humidity = response.data.temperature.humidity;
   let wind = response.data.wind.speed;
-  let description = response.data.weather[0].description;
-  let datum = 1000 * response.data.dt;
-  //     !!!                  to ADD: time, forecast
+  let description = response.data.condition.description;
+
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = `${city}, ${country}`;
   let temperatureElement = document.querySelector("#temp");
@@ -46,12 +49,12 @@ function displayWeather(response) {
   windElement.innerHTML = Math.round(wind);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = description;
-  let datumElement = document.querySelector("#formatDate");
-  datumElement.innerHTML = formatDate(datum);
+  let iconElement = document.querySelector("#bigIcon");
+  iconElement.innerHTML = `<img class="bigIcon" src="${response.data.condition.icon_url}" alt="weather icon">`;
 }
 function citySearch(city) {
-  let apiKey = "b61fef651891eb9cf133b7845c0e062a";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+  let apiKey = "05t403db42bffa02aad4f14o376ac090";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeather);
 }
 // search engine

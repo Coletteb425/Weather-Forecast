@@ -129,6 +129,13 @@ h3.forecast-temp {
 .description::first-letter {
   text-transform: capitalize;
 }
+.detailIcon {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  position: relative;
+  top: 10px;
+}
 
 .codedby {
   color: #468faf;
