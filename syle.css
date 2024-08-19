@@ -73,17 +73,27 @@ img.forecast-icon {
   align-items: center;
 }
 .temperature-units {
-  display: flex;
+  display: inline-flex;
+  position: relative;
+  right: -80px;
+  top: -30px;
 }
 
 .emoji {
   display: block;
   font-size: 50px;
 }
+.description {
+  margin-top: 0px;
+  position: relative;
+  top: -30px;
+}
 
 h2.weather-temp {
   font-size: 36px;
   font-weight: 700;
+  display: inline-flex;
+  position: relative;
 }
 h1.forecast-day {
   font-size: 22px;
@@ -125,6 +135,9 @@ h3.forecast-temp {
 .description::first-letter {
   text-transform: capitalize;
 }
+#description {
+  margin: 0px;
+}
 .detailIcon {
   height: 30px;
   width: 30px;
@@ -146,6 +159,11 @@ input {
   box-shadow: 1px 1px 1px lightblue;
   font-family: "Roboto", system-ui;
   font-size: 18px;
+}
+#bigIcon {
+  display: inline-flex;
+  position: relative;
+  left: -160px;
 }
 #city-input {
   background-color: #fffbf8;
