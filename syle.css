@@ -67,10 +67,14 @@ img.forecast-icon {
 .container {
   background-color: white;
   border-radius: 10px;
-  margin: auto;
+  margin: 80px auto;
   max-width: 900px;
   display: block;
   align-items: center;
+}
+h4 {
+  margin: 0px auto;
+  display: block;
 }
 .temperature-units {
   display: inline-flex;

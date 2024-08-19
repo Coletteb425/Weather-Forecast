@@ -34,6 +34,12 @@ currentDateELement.innerHTML = formatDate(currentDate);
 function displayWeather(response) {
   let city = response.data.city;
   let country = response.data.country;
+  if (
+    response.data.country ===
+    "United Kingdom of Great Britain and Northern Ireland"
+  )
+    country = "UK";
+  else response.data.country;
   tempC = response.data.temperature.current;
   let humidity = response.data.temperature.humidity;
   let wind = response.data.wind.speed;
