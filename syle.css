@@ -1,6 +1,9 @@
 body {
   font-family: "Roboto", system-ui;
-  background-color: #0c1439;
+  background-image: url("media/weather-scenarios-collage-dbk9c5n23l7e5fgb.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: black;
 }
 
 form {
@@ -42,7 +45,6 @@ p {
   font-size: 12px;
   text-align: center;
   color: #ff2281;
-  text-shadow: 1px 1px 1px white;
 }
 
 img.forecast-icon {
@@ -58,6 +60,14 @@ img.forecast-icon {
   border-radius: 20px;
 }
 
+.container {
+  background-color: white;
+  border-radius: 10px;
+  margin: 250px auto;
+  max-width: 800px;
+  display: block;
+  align-items: center;
+}
 .temperature-units {
   display: flex;
 }
@@ -125,4 +135,5 @@ input {
   border-radius: 8px;
   box-shadow: 1px 1px 1px lightblue;
   font-family: "Roboto", system-ui;
+  font-size: 18px;
 }
