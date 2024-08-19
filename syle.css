@@ -12,39 +12,43 @@ form {
 }
 
 h1 {
-  color: #ff2281;
+  color: #013a63;
   text-shadow: 1px 1px 1px white;
   padding-top: 10px;
   font-weight: 700;
+  font-size: 42px;
+  margin-bottom: 10px;
 }
 
 h2,
 h3 {
-  color: #ff2281;
+  color: #013a63;
   text-shadow: 1px 1px 1px white;
 }
 
 h4 {
-  color: #ff2281;
+  color: #013a63;
   text-shadow: 1px 1px 1px white;
 }
 
 h5 {
-  color: #ff2281;
+  color: #013a63;
   font-weight: 600;
+  margin: 3px;
   text-shadow: 1px 1px 1px white;
 }
 
 i {
-  color: #ff2281;
+  color: #013a63;
   text-shadow: 1px 1px 1px white;
   font-size: 32px;
 }
 
 p {
-  font-size: 12px;
+  font-size: 16px;
   text-align: center;
-  color: #ff2281;
+  color: #013a63;
+  padding-bottom: 20px;
 }
 
 img.forecast-icon {
@@ -63,7 +67,7 @@ img.forecast-icon {
 .container {
   background-color: white;
   border-radius: 10px;
-  margin: 250px auto;
+  margin: 240px auto;
   max-width: 800px;
   display: block;
   align-items: center;
@@ -93,14 +97,16 @@ h3.forecast-temp {
 
 .units {
   margin-left: 10px;
-  color: #ff2281;
+  color: #013a63;
   text-shadow: 1px 1px 1px white;
-  font-size: 22px;
+  font-size: 28px;
   font-weight: 700;
+  margin-top: 30px;
 }
 
 .units a {
-  color: #ff2281;
+  color: gray;
+  opacity: 50%;
   text-shadow: 1px 1px 1px white;
 }
 
@@ -111,12 +117,13 @@ h3.forecast-temp {
 
 .fa-map-marker-alt {
   font-size: 14px;
-  color: #ff2281;
+  color: #013a63;
 }
 .units a.active {
   text-decoration: none;
   cursor: default;
-  color: #ff2281;
+  color: #013a63;
+  opacity: 100%;
   text-shadow: 1px 1px 1px white;
 }
 .description::first-letter {
@@ -124,16 +131,29 @@ h3.forecast-temp {
 }
 
 .codedby {
-  color: white;
+  color: #468faf;
 }
 button {
   border-radius: 10px;
   box-shadow: 1px 1px 1px lightblue;
   font-family: "Roboto", system-ui;
+  background-color: #a9a9a9;
+  border: none;
 }
 input {
-  border-radius: 8px;
   box-shadow: 1px 1px 1px lightblue;
   font-family: "Roboto", system-ui;
   font-size: 18px;
+}
+#city-input {
+  border-radius: 4px;
+  background-color: #a9d6e5;
+  border: none;
+  padding: 5px;
+}
+#search-button {
+  background-color: #89c2d9;
+  border: none;
+  padding: 5px;
+  border-radius: 4px;
 }
