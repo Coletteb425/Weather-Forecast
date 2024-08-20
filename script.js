@@ -39,6 +39,7 @@ function displayWeather(response) {
     "United Kingdom of Great Britain and Northern Ireland"
   )
     country = "UK";
+  if (response.data.country === "United States of America") country = "USA";
   else response.data.country;
   if (response.data.message === "City not found")
     alert("City not found please try again");
