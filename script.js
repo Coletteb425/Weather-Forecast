@@ -40,6 +40,9 @@ function displayWeather(response) {
   )
     country = "UK";
   else response.data.country;
+  if (response.data.message === "City not found")
+    alert("City not found please try again");
+  console.log(response.data);
   tempC = response.data.temperature.current;
   let humidity = response.data.temperature.humidity;
   let wind = response.data.wind.speed;
@@ -55,6 +58,16 @@ function displayWeather(response) {
   windElement.innerHTML = Math.round(wind);
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = description;
+  if (description.includes("cloud"))
+    document.body.style.backgroundImage = "url(Media/cloudy.jpg)";
+  if (description.includes("clear"))
+    document.body.style.backgroundImage = "url(Media/sunny.jpg)";
+  if (description.includes("rain"))
+    document.body.style.backgroundImage = "url(Media/rainy.jpg)";
+  if (response.data.condition.icon.includes("night"))
+    document.body.style.backgroundImage = "url(Media/night.jpeg)";
+  if (response.data.condition.icon.includes("thunderstorm"))
+    document.body.style.backgroundImage = "url(Media/thunder.jpg)";
   let iconElement = document.querySelector("#bigIcon");
   iconElement.innerHTML = `<img class="bigIcon" src="${response.data.condition.icon_url}" alt="weather icon">`;
 }
