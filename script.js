@@ -1,39 +1,12 @@
-function formatDate(date) {
-  let minutes = date.getMinutes();
-  let hours = date.getHours();
-  let day = date.getDay();
-
-  if (minutes < 10) {
-    minutes = `0${minutes}`;
-  }
-
-  if (hours < 10) {
-    hours = `0${hours}`;
-  }
-
-  let days = [
-    "Sunday",
-    "Monday",
-    "Tuesday",
-    "Wednesday",
-    "Thursday",
-    "Friday",
-    "Saturday",
-  ];
-
-  let formattedDay = days[day];
-  return `${formattedDay} ${hours}:${minutes}`;
-}
-
-let currentDateELement = document.querySelector("#formatDate");
-let currentDate = new Date();
-
-currentDateELement.innerHTML = formatDate(currentDate);
-
 // function displaying weather info from API
 function displayWeather(response) {
+  let date = new Date(response.data.time * 1000);
+  let currentDateELement = document.querySelector("#formatDate");
+
+  currentDateELement.innerHTML = formattedDate(date);
   let city = response.data.city;
   let country = response.data.country;
+
   if (
     response.data.country ===
     "United Kingdom of Great Britain and Northern Ireland"
@@ -71,6 +44,26 @@ function displayWeather(response) {
     document.body.style.backgroundImage = "url(Media/thunder.jpg)";
   let iconElement = document.querySelector("#bigIcon");
   iconElement.innerHTML = `<img class="bigIcon" src="${response.data.condition.icon_url}" alt="weather icon">`;
+}
+function formattedDate(date) {
+  let minutes = date.getMinutes();
+  let hours = date.getHours();
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+
+  return `${day} ${hours}:${minutes}`;
 }
 function citySearch(city) {
   let apiKey = "05t403db42bffa02aad4f14o376ac090";
