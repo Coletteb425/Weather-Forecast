@@ -225,3 +225,42 @@ button[type="submit"] {
 input[type="search"]:focus {
   outline: 0;
 }
+#humidity {
+  color: #01b0ae;
+  font-weight: bold;
+}
+#wind-speed {
+  color: #01b0ae;
+  font-weight: bold;
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.weather-forecast-date {
+  text-align: center;
+  color: #013a63;
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+.weather-forecast-icon {
+  font-size: 38px;
+  text-align: center;
+}
+.weather-forecast-temperatures {
+  text-align: center;
+  color: #01b0ae;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.weather-forecast-temperature {
+  padding: 0px 10px;
+}

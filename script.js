@@ -27,9 +27,9 @@ function displayWeather(response) {
   let temperatureElement = document.querySelector("#temp");
   temperatureElement.innerHTML = Math.round(tempC);
   let humidityElement = document.querySelector("#humidity");
-  humidityElement.innerHTML = humidity;
+  humidityElement.innerHTML = `${humidity}%`;
   let windElement = document.querySelector("#wind-speed");
-  windElement.innerHTML = Math.round(wind);
+  windElement.innerHTML = `${Math.round(wind)}m/s`;
   let descriptionElement = document.querySelector("#description");
   descriptionElement.innerHTML = description;
   if (description.includes("cloud"))
@@ -105,3 +105,29 @@ let tempC = null;
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", citySubmit);
 citySearch("London");
+
+function displayForecast() {
+  let days = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHtml = "";
+
+  days.forEach(function (day) {
+    forecastHtml =
+      forecastHtml +
+      `
+      <div class="weather-forecast-day">
+        <div class="weather-forecast-date">${day}</div>
+        <div class="weather-forecast-icon">🌤️</div>
+        <div class="weather-forecast-temperatures">
+          <div class="weather-forecast-temperature">
+            <strong>15º</strong>
+          </div>
+          <div class="weather-forecast-temperature">9º</div>
+        </div>
+      </div>
+    `;
+  });
+
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHtml;
+}
+displayForecast();
