@@ -59,15 +59,15 @@ img.forecast-icon {
 .weather-app {
   background-size: cover;
   max-width: 800px;
-  margin: 12px auto;
-  padding: 25px;
+  margin: 12px auto 0px auto;
+  padding: 25px 25px 0px 25px;
   border-radius: 20px;
 }
 
 .container {
   background-color: white;
   border-radius: 10px;
-  margin: 80px auto;
+  margin: 30px auto;
   max-width: 700px;
   display: block;
   align-items: center;
@@ -77,24 +77,12 @@ h4 {
   display: block;
 }
 .temperature-units {
-  display: inline-flex;
-  position: relative;
-  right: -80px;
-  top: -30px;
-}
-
-.emoji {
-  display: block;
-  font-size: 50px;
-}
-.description {
-  margin-top: 0px;
-  position: relative;
-  top: -30px;
+  display: flex;
+  text-align: center;
 }
 
 h2.weather-temp {
-  font-size: 36px;
+  font-size: 46px;
   font-weight: 700;
   display: inline-flex;
   position: relative;
@@ -116,7 +104,7 @@ h3.forecast-temp {
   text-shadow: 1px 1px 1px white;
   font-size: 28px;
   font-weight: 700;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 .units a {
@@ -139,16 +127,6 @@ h3.forecast-temp {
 .description::first-letter {
   text-transform: capitalize;
 }
-#description {
-  margin: 0px;
-}
-.detailIcon {
-  height: 30px;
-  width: 30px;
-  display: inline-block;
-  position: relative;
-  top: 10px;
-}
 
 .codedby {
   color: #468faf;
@@ -164,10 +142,31 @@ input {
   font-family: "Roboto", system-ui;
   font-size: 18px;
 }
-#bigIcon {
-  display: inline-flex;
+.bigIcon {
+  height: 170px;
+  width: 170px;
+}
+.humidityWind {
   position: relative;
-  left: -160px;
+  top: -80px;
+}
+
+.iconDescription {
+  position: relative;
+  left: 300px;
+  top: -20px;
+}
+#description {
+  color: #013a63;
+  text-shadow: 1px 1px 1px white;
+  display: inline-block;
+}
+.detailIcon {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  position: relative;
+  top: 10px;
 }
 #city-input {
   background-color: #fffbf8;
@@ -178,17 +177,17 @@ input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 6px;
-  -webkit-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
+  -webkit-box-shadow: 0 2px 4px 0 rgba(216, 213, 213, 0.83),
     0 10px 15px 0 rgba(126, 126, 126, 0.12),
-    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+    0 -2px 6px 1px rgba(216, 213, 213, 0.83) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  -moz-box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
-    0 10px 15px 0 rgba(126, 126, 126, 0.12),
-    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+  -moz-box-shadow: 0 2px 4px 0 rgba(216, 213, 213, 0.83),
+    0 10px 15px 0 rgba(216, 213, 213, 0.83),
+    0 -2px 6px 1px rgba(216, 213, 213, 0.83) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
-  box-shadow: 0 2px 4px 0 rgba(72, 72, 72, 0.83),
-    0 10px 15px 0 rgba(126, 126, 126, 0.12),
-    0 -2px 6px 1px rgba(199, 199, 199, 0.55) inset,
+  box-shadow: 0 2px 4px 0 rgba(216, 213, 213, 0.83),
+    0 10px 15px 0 rgba(216, 213, 213, 0.83),
+    0 -2px 6px 1px rgba(216, 213, 213, 0.83) inset,
     0 2px 4px 2px rgba(255, 255, 255, 0.83) inset;
 }
 input[type="search"] {
