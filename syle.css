@@ -1,7 +1,5 @@
 body {
   font-family: "Roboto", system-ui;
-
-  background-repeat: no-repeat;
   background-size: cover;
   background-color: black;
 }
@@ -20,8 +18,7 @@ h1 {
   margin-bottom: 10px;
 }
 
-h2,
-h3 {
+h2 {
   color: #013a63;
   text-shadow: 1px 1px 1px white;
 }
@@ -29,6 +26,8 @@ h3 {
 h4 {
   color: #013a63;
   text-shadow: 1px 1px 1px white;
+  margin: 0px auto;
+  display: block;
 }
 
 h5 {
@@ -38,22 +37,11 @@ h5 {
   text-shadow: 1px 1px 1px white;
 }
 
-i {
-  color: #013a63;
-  text-shadow: 1px 1px 1px white;
-  font-size: 32px;
-}
-
 p {
   font-size: 16px;
   text-align: center;
   color: #013a63;
   padding-bottom: 20px;
-}
-
-img.forecast-icon {
-  width: 50px;
-  margin-bottom: 8px;
 }
 
 .weather-app {
@@ -72,10 +60,6 @@ img.forecast-icon {
   display: block;
   align-items: center;
 }
-h4 {
-  margin: 0px auto;
-  display: block;
-}
 .temperature-units {
   display: flex;
   text-align: center;
@@ -86,16 +70,6 @@ h2.weather-temp {
   font-weight: 700;
   display: inline-flex;
   position: relative;
-}
-h1.forecast-day {
-  font-size: 22px;
-  font-weight: 600;
-}
-
-h3.forecast-temp {
-  font-size: 18px;
-  font-weight: 500;
-  margin-bottom: 0;
 }
 
 .units {
@@ -112,11 +86,6 @@ h3.forecast-temp {
   opacity: 50%;
   text-shadow: 1px 1px 1px white;
 }
-
-.fa-map-marker-alt {
-  font-size: 14px;
-  color: #013a63;
-}
 .units a.active {
   text-decoration: none;
   cursor: default;
@@ -130,12 +99,6 @@ h3.forecast-temp {
 
 .codedby {
   color: #468faf;
-}
-button {
-  border-radius: 10px;
-  box-shadow: 1px 1px 1px lightblue;
-  font-family: "Roboto", system-ui;
-  border: none;
 }
 input {
   box-shadow: 1px 1px 1px lightblue;
